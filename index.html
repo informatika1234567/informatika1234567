@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerPulse Sports - Alat Olahraga Berkualitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+        :root {
+            --primary-yellow: #facc15;
+            --dark-bg: #0a0a0a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        .font-header {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .yellow-gradient {
+            background: linear-gradient(135deg, #facc15 0%, #ca8a04 100%);
+        }
+
+        .dark-gradient {
+            background: linear-gradient(180deg, #121212 0%, #000000 100%);
+        }
+
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            background-color: rgba(10, 10, 10, 0.8);
+        }
+
+        .hero-bg {
+            background: radial-gradient(circle at top right, rgba(250, 204, 21, 0.15), transparent),
+                        radial-gradient(circle at bottom left, rgba(250, 204, 21, 0.05), transparent);
+        }
+    </style>
+</head>
+<body class="hero-bg">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 nav-blur border-b border-yellow-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-yellow-400 font-header text-2xl font-bold tracking-tighter">POWER<span class="text-white">PULSE</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-yellow-400 px-3 py-2 transition-colors">Beranda</a>
+                        <a href="#produk" class="hover:text-yellow-400 px-3 py-2 transition-colors">Koleksi</a>
+                        <a href="#keunggulan" class="hover:text-yellow-400 px-3 py-2 transition-colors">Keunggulan</a>
+                        <a href="#kontak" class="bg-yellow-400 text-black font-bold px-5 py-2 rounded-full hover:bg-yellow-300 transition-all">Beli Sekarang</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-yellow-400 text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 p-4 space-y-4 border-b border-yellow-500/20">
+            <a href="#home" class="block hover:text-yellow-400">Beranda</a>
+            <a href="#produk" class="block hover:text-yellow-400">Koleksi</a>
+            <a href="#keunggulan" class="block hover:text-yellow-400">Keunggulan</a>
+            <a href="#kontak" class="block text-yellow-400 font-bold">Beli Sekarang</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
+                <h2 class="text-yellow-400 font-bold uppercase tracking-widest mb-4">Elevate Your Performance</h2>
+                <h1 class="text-5xl lg:text-7xl font-header font-bold leading-tight mb-6">
+                    DOMINASI <span class="text-yellow-400 italic">ARENA</span> DENGAN PERALATAN TERBAIK
+                </h1>
+                <p class="text-gray-400 text-lg mb-8 max-w-xl mx-auto lg:mx-0">
+                    Kami menyediakan alat olahraga kualitas premium untuk atlet profesional maupun pemula. Tingkatkan limitmu hari ini.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#produk" class="yellow-gradient text-black font-bold py-4 px-10 rounded-lg text-lg hover:scale-105 transition-transform inline-block">
+                        Lihat Katalog
+                    </a>
+                    <a href="#kontak" class="border border-yellow-400 text-yellow-400 font-bold py-4 px-10 rounded-lg text-lg hover:bg-yellow-400/10 transition-all inline-block">
+                        Konsultasi Alat
+                    </a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 relative">
+                <div class="absolute -z-10 w-64 h-64 bg-yellow-500/20 rounded-full blur-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gym Equipment" class="rounded-2xl shadow-2xl border-2 border-yellow-500/30 transform lg:rotate-3 hover:rotate-0 transition-transform duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="keunggulan" class="py-20 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 border border-yellow-500/10 rounded-2xl bg-zinc-900/50 text-center glow-hover">
+                    <div class="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-yellow-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-header">Durabilitas Tinggi</h3>
+                    <p class="text-gray-400">Didesain untuk penggunaan intensif dengan material kelas militer yang tahan lama.</p>
+                </div>
+                <div class="p-8 border border-yellow-500/10 rounded-2xl bg-zinc-900/50 text-center glow-hover">
+                    <div class="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shipping-fast text-yellow-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-header">Pengiriman Cepat</h3>
+                    <p class="text-gray-400">Layanan ekspres ke seluruh Indonesia dengan garansi keamanan barang sampai tujuan.</p>
+                </div>
+                <div class="p-8 border border-yellow-500/10 rounded-2xl bg-zinc-900/50 text-center glow-hover">
+                    <div class="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tags text-yellow-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-header">Harga Kompetitif</h3>
+                    <p class="text-gray-400">Dapatkan kualitas perlengkapan elit dengan harga yang tetap masuk akal dan transparan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="produk" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-yellow-400 font-bold mb-2">HOT ITEMS</h2>
+                    <h3 class="text-4xl font-header font-bold">PRODUK UNGGULAN</h3>
+                </div>
+                <a href="#" class="text-yellow-400 hover:underline hidden sm:block">Lihat Semua →</a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-zinc-900 rounded-xl overflow-hidden border border-white/5 glow-hover">
+                    <div class="h-64 bg-zinc-800 relative">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=400&q=80" alt="Dumbbell Set" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded">BEST SELLER</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2">Adjustable Dumbbell Set</h4>
+                        <p class="text-yellow-400 font-bold text-xl mb-4">Rp 2.499.000</p>
+                        <button class="w-full bg-white/10 hover:bg-yellow-400 hover:text-black py-2 rounded font-bold transition-all flex items-center justify-center gap-2">
+                            <i class="fas fa-shopping-cart text-sm"></i> Tambah Ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-zinc-900 rounded-xl overflow-hidden border border-white/5 glow-hover">
+                    <div class="h-64 bg-zinc-800 relative">
+                        <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=400&q=80" alt="Bench Press" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2">Professional Bench Press</h4>
+                        <p class="text-yellow-400 font-bold text-xl mb-4">Rp 5.750.000</p>
+                        <button class="w-full bg-white/10 hover:bg-yellow-400 hover:text-black py-2 rounded font-bold transition-all flex items-center justify-center gap-2">
+                            <i class="fas fa-shopping-cart text-sm"></i> Tambah Ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-zinc-900 rounded-xl overflow-hidden border border-white/5 glow-hover">
+                    <div class="h-64 bg-zinc-800 relative">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=400&q=80" alt="Power Rack" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">SALE</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2">Ultimate Power Rack</h4>
+                        <p class="text-yellow-400 font-bold text-xl mb-4">Rp 8.900.000</p>
+                        <button class="w-full bg-white/10 hover:bg-yellow-400 hover:text-black py-2 rounded font-bold transition-all flex items-center justify-center gap-2">
+                            <i class="fas fa-shopping-cart text-sm"></i> Tambah Ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-zinc-900 rounded-xl overflow-hidden border border-white/5 glow-hover">
+                    <div class="h-64 bg-zinc-800 relative">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=400&q=80" alt="Yoga Mat" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2">Eco-Grip Yoga Mat</h4>
+                        <p class="text-yellow-400 font-bold text-xl mb-4">Rp 450.000</p>
+                        <button class="w-full bg-white/10 hover:bg-yellow-400 hover:text-black py-2 rounded font-bold transition-all flex items-center justify-center gap-2">
+                            <i class="fas fa-shopping-cart text-sm"></i> Tambah Ke Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="kontak" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto yellow-gradient p-12 rounded-3xl text-center text-black">
+            <h2 class="text-4xl font-header font-bold mb-6 italic">SIAP UNTUK BERUBAH?</h2>
+            <p class="text-lg font-semibold mb-8 opacity-80">Hubungi tim ahli kami untuk mendapatkan rekomendasi alat yang sesuai dengan target fitness Anda.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="showMessage('Mengarahkan ke WhatsApp...')" class="bg-black text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:scale-105 transition-transform">
+                    <i class="fab fa-whatsapp text-2xl"></i> Hubungi via WhatsApp
+                </button>
+                <button onclick="showMessage('Menampilkan Katalog PDF...')" class="bg-transparent border-2 border-black px-8 py-4 rounded-xl font-bold hover:bg-black hover:text-white transition-all">
+                    Download Katalog
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-yellow-500/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-1">
+                <span class="text-yellow-400 font-header text-2xl font-bold tracking-tighter">POWER<span class="text-white">PULSE</span></span>
+                <p class="mt-4 text-gray-500">Penyedia alat olahraga nomor satu yang berkomitmen pada kualitas dan hasil maksimal.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Navigasi</h4>
+                <ul class="text-gray-500 space-y-2">
+                    <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Products</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">About Us</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Bantuan</h4>
+                <ul class="text-gray-500 space-y-2">
+                    <li><a href="#" class="hover:text-yellow-400">Garansi Produk</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Pengiriman</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">FAQ</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Return Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Social Media</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 bg-zinc-900 flex items-center justify-center rounded-full hover:bg-yellow-400 hover:text-black transition-all">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-zinc-900 flex items-center justify-center rounded-full hover:bg-yellow-400 hover:text-black transition-all">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-zinc-900 flex items-center justify-center rounded-full hover:bg-yellow-400 hover:text-black transition-all">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 pt-12 mt-12 border-t border-white/5 text-center text-gray-600 text-sm">
+            <p>&copy; 2025 PowerPulse Sports Indonesia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Alert Message -->
+    <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-yellow-400 text-black px-6 py-3 rounded-full font-bold shadow-2xl opacity-0 transition-opacity pointer-events-none z-[100]">
+        Message here
+    </div>
+
+    <script>
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Simple Message Box Replacement for alert()
+        function showMessage(text) {
+            const toast = document.getElementById('toast');
+            toast.innerText = text;
+            toast.style.opacity = '1';
+            setTimeout(() => {
+                toast.style.opacity = '0';
+            }, 3000);
+        }
+
+        // Close menu on click link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
